@@ -16,3 +16,5 @@ feature :-
 
 
 ![login](https://github.com/nihalsrivastava02/Hackathon-2.0/blob/master/images/111111.PNG)
+![student page](https://github.com/nihalsrivastava02/Hackathon-2.0/blob/master/images/33333.PNG)
+
