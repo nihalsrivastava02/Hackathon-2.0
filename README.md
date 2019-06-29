@@ -7,7 +7,7 @@ language used :-
 - CSS
 - Javascript
 
-#feature :-
+feature :-
 - Session Management
 - Student can view assignment
 - Student can view marks obtained
