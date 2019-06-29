@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+	<title>ADMIN</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript">
+    function hide()
+		{
+			document.getElementById("teacher").style.display = "none";
+			document.getElementById("student").style.display = "none";
+		}
+	</script>
+</head>
+<body onload="hide()">
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/Ph.D.-in-the-Uttarakhand-Technical-University.png');">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="user_registration.php" method="post">
+					<!-- <span class="login100-form-logo">
+						<i class="zmdi zmdi-landscape"></i>
+					</span> -->
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						Register
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" name="id" placeholder="User Id">
+						<span class="focus-input100" ></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" name="u_name" placeholder="User Name">
+						<span class="focus-input100" ></span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="u_password" placeholder="Password" required="required">
+						<span class="focus-input100"></span>
+					</div>
+					<div>
+				<select class="custom-select" name="u_type" onchange="myfunction.call(this, event)">
+  					<option selected>select user type</option>
+  					<option value="S">student</option>
+  					<option value="T">Teacher</option>
+  					<option value="E">Employee</option>
+  					<option value="A">Admin</option>
+				</select>
+			</div>
+			<div id="teacher" class="wrap-input100 validate-input" data-validate = "Enter designation">
+				<input class="input100" name="designation" placeholder="Designation">
+				<span class="focus-input100" ></span>
+			</div>
+			<div id="student" class="wrap-input100 validate-input" data-validate = "Enter username">
+				<input class="input100" name="branch_code" placeholder="Branch code" required="required">
+				<span class="focus-input100" ></span>
+			</div>
+			<div class="wrap-input100 validate-input" data-validate="Enter department">
+						<input class="input100" name="department" placeholder="Department" required="required">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Register
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function myfunction(s)
+		{
+			var str=this.options[this.selectedIndex].value;
+			if(str == 'T')
+			{
+				document.getElementById("teacher").style.display = "block";
+				document.getElementById("student").style.display = "none";
+			}
+			if(str == 'S')
+			{
+				document.getElementById("student").style.display = "block";
+				document.getElementById("teacher").style.display = "none";
+			}
+		}
+	</script>
+</body>
+</html>
